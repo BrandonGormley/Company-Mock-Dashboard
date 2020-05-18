@@ -1,0 +1,156 @@
+/* ====================CSS GRID LAYOUT================ */
+ body {
+    font-family: 'Balsamiq Sans', cursive;
+ }
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 50px 1fr;
+    grid-template-areas: 
+        'head'
+        'pageNav'
+        'mainContent';
+}
+
+header {
+    grid-area: head;
+}
+
+nav {
+    grid-area: pageNav;
+}
+
+main {
+    grid-area: mainContent;
+    display: grid;
+    grid-gap: 2px;
+}
+
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* ====================HEADER STYLES================ */
+
+.header-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.header-brand {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1.75rem;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.header-profile {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.header-profile-name {
+    margin-right: 1rem;
+    color: rgb(134, 241, 120);
+    font-size: 1rem;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.header-profile-img img {
+    border-radius: 50%;
+    height: 100%;
+    width: 30px;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.header-profile-notification-bell img {
+    height: 100%;
+    width: 25px;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+/* ====================NAV STYLES================ */
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-container div {
+    width: 35px;
+    margin: 5px 25px;
+
+}
+
+/* ====================Dashboard Header STYLES================ */
+
+.dash-top {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.headline {
+    margin: 10px;
+    color: #505050;
+}
+
+.main-header-search {
+    margin: 10px;
+}
+
+.main-header-search input {
+    padding: 8px 0;
+    width: 20rem;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 2px;
+}
+
+.alert-container {
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+    border: 2px solid red;
+}
+
+/* =============MEDIA QUERIES================== */
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas:
+            "head head"
+            "pageNav mainContent";
+     }
+
+     .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .nav-container div {
+        width: 35px;
+        margin: 20px 10px;
+    
+    }
+}
