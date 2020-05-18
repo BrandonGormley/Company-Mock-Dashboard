@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid Layout Starer Files</title>
-    <script src="https://kit.fontawesome.com/de183f27ea.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="colors.css">
@@ -14,60 +12,56 @@
 
 <body>
     <div class="grid-container">
-        <header>
-            <div class="header-container">
-                <div class="header-brand">YourApp</div>
-                <div class="header-profile">
-                    <div class="header-profile-notification-bell"><img src="icons/icon-bell.svg" alt=""></div>
-                    <div class="header-profile-img"> <img src="images/member-1.jpg" alt=""></div>
-                    <div class="header-profile-name">Brandon Gormley</div>
+        <header class="header-container">
+            <h1>Me<span>Trics</span></h1>
+
+            <div class="profile-container">
+                <div class="profile-container-bell">
+                    <img class="profile-bell" src="icons/icon-bell.svg" alt="">
                 </div>
+                <img class="profile-img" src="images/member-1.jpg" alt="">
+                <h3 class="profile-header">Brandon Gormley</h3>
             </div>
-        </header>
-        <nav>
-            <div class="nav-container">
-                <div class="nav-icon-dashboard"><a href=""><img src="icons/icon-dashboard.svg" alt=""></a></div>
-                <div class="nav-icon-members"><a href=""><img src="icons/icon-members.svg" alt=""></a></div>
-                <div class="nav-icon-visits"><a href=""><img src="icons/icon-visits.svg" alt=""></a></div>
-                <div class="nav-icon-settings"><a href=""><img src="icons/icon-settings.svg" alt=""></a></div>
-            </div>
-        </nav>
+        </header> <!-- /header -->
+
+
+
+
+
+
+
+        <nav></nav> <!-- /nav -->
+
+
+
+
+
+
+
+
         <main>
-            <div class="dash-top" id="dashboard">
-                <h2 class="headline">Dashboard</h2>
-                <div class="main-header-search">
-                    <input type="search" placeholder="  Search...">
-                </div>
-
-                <div class="alert-container">
-                    <div class="alert" id="alert">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="full-size-chart"></div>
+            <div class="dash-top"></div> <!-- /dash-top -->
+            <div class="full-size-chart"></div> <!-- /full-size-chart -->
             <div class="half-size-charts">
                 <div class="chart-1"></div>
                 <div class="chart-2"></div>
-            </div>
-            <div class="social-media-info" id="">
+            </div> <!-- /half-size-charts -->
+            <div class="social-media-info">
                 <div class="social-1"></div>
                 <div class="social-2"></div>
                 <div class="social-3"></div>
-            </div>
+            </div> <!-- /social-media-info -->
             <div class="member-info">
                 <div class="members-1"></div>
                 <div class="members-2"></div>
-            </div>
+            </div> <!-- /member-info -->
             <div class="message-and-settings">
                 <div class="message"></div>
                 <div class="settings"></div>
-            </div>
-        </main>
+            </div> <!-- /message-and-settings -->
+        </main> <!-- /main -->
     </div>
-
-    <script src="app.js"></script>
+    <!-- /grid-container—>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
-/* ====================CSS GRID LAYOUT================ */
- body {
+body {
     font-family: 'Balsamiq Sans', cursive;
- }
+}
+
+/* ======================= GRID STYLES ==================== */
 
 .grid-container {
     display: grid;
@@ -9,148 +10,134 @@
     grid-template-columns: 1fr;
     grid-template-rows: 60px 50px 1fr;
     grid-template-areas: 
-        'head'
-        'pageNav'
-        'mainContent';
+        "head"
+        "pageNav"
+        "mainContent";
 }
 
 header {
     grid-area: head;
-}
+ }
 
 nav {
     grid-area: pageNav;
-}
+ }
 
 main {
     grid-area: mainContent;
     display: grid;
-    grid-gap: 2px;
-}
+    /* grid-gap: 2px; */
+ }
 
 .half-size-charts,
 .social-media-info,
 .member-info,
 .message-and-settings {
-    display: grid;
-    grid-gap: 2px;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   display: grid;
+   grid-gap: 2px;
 }
 
-/* ====================HEADER STYLES================ */
+.half-size-charts,
+.member-info,
+.message-and-settings {
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* ======================= HEADER STYLES ==================== */
 
 .header-container {
     display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-.header-brand {
-    margin-left: 1rem;
-    color: white;
-    font-size: 1.75rem;
-    font-family: 'Balsamiq Sans', cursive;
-}
-
-.header-profile {
-    display: flex;
-    height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: flex-end;
-
+    justify-content: space-between;
 }
 
-.header-profile-name {
-    margin-right: 1rem;
-    color: rgb(134, 241, 120);
-    font-size: 1rem;
-    font-family: 'Balsamiq Sans', cursive;
-}
-
-.header-profile-img img {
-    border-radius: 50%;
-    height: 100%;
-    width: 30px;
-    margin-right: 1rem;
+.header-container h1 {
+    color: white;
+    font-size: 1.5rem;
     vertical-align: middle;
+    margin: 16px;
 }
 
-.header-profile-notification-bell img {
-    height: 100%;
+.header-container h1 span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-header {
+    color: white;
+    margin: 16px;
+    font-size: .8rem;
+}
+
+.profile-img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.profile-container-bell {
     width: 25px;
     margin-right: 1rem;
+    border-right: 1px solid white;
+}
+
+.profile-bell {
     vertical-align: middle;
 }
 
-/* ====================NAV STYLES================ */
 
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================= MEDIA QUERIES ==================== */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-rows: 70px 60px 1fr;
+    }
 }
-
-.nav-container div {
-    width: 35px;
-    margin: 5px 25px;
-
-}
-
-/* ====================Dashboard Header STYLES================ */
-
-.dash-top {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    flex-wrap: wrap;
-}
-
-.headline {
-    margin: 10px;
-    color: #505050;
-}
-
-.main-header-search {
-    margin: 10px;
-}
-
-.main-header-search input {
-    padding: 8px 0;
-    width: 20rem;
-    border: 1px solid rgb(148, 148, 148);
-    border-radius: 2px;
-}
-
-.alert-container {
-    display: flex;
-    width: 100%;
-    margin: 1rem;
-    border: 2px solid red;
-}
-
-/* =============MEDIA QUERIES================== */
 
 @media (min-width: 1024px) {
     .grid-container {
         grid-template-columns: 60px 1fr;
         grid-template-rows: 60px 1fr;
-        grid-template-areas:
-            "head head"
-            "pageNav mainContent";
-     }
+        grid-template-areas: 
+        "head head"
+        "pageNav mainContent";
+    }
 
-     .nav-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    .nav-container div {
-        width: 35px;
-        margin: 20px 10px;
-    
-    }
+    .social-media-info {
+        grid-template-columns: repeat(3, 1fr);
+     }
 }
