@@ -74,24 +74,30 @@ main {
     color: white;
     margin: 16px;
     font-size: .8rem;
+    display: none;
 }
 
 .profile-img {
-    width: 30px;
+    width: 35px;
     border-radius: 50%;
+    margin-right: 20px;
 }
 
 .profile-container-bell {
     width: 25px;
     padding: 8px 20px 8px 0;
     margin-right: 1rem;
-    border-right: 2px solid rgb(177, 177, 177);
+    border-right: 2px solid white;
     box-sizing: initial;
-
 }
 
 .profile-bell {
     vertical-align: middle;
+    transition: .3s ease-out;
+}
+
+.profile-bell:hover {
+    transform: scale(1.1) rotate(-10deg);
 }
 
 /* ======================= NAV STYLES ==================== */
@@ -102,12 +108,73 @@ main {
     align-items: center;
 }
 
-.nav-icon {
-    width: 40px;
-    margin: 20px 10px;
+.nav-item {
+    height: 35px;
+    width: 35px;
+    margin: auto 24px;
 }
 
+.nav-icon {
+    height: 40px;
+    width: 40px;
+}
 
+/* ======================= DASH / ALERT STYLES ==================== */
+
+.dash-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dash-header {
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    font-size: 2rem;
+}
+
+.dash-header-search {
+    background: rgb(172, 172, 172);
+    text-align: center;
+    width: 100%;
+    padding: 24px 0;
+    border-top: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.dash-header-search input {
+    background: rgb(245, 245, 245);
+    width: 20rem;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #b8b8b8;
+    font-size: 1rem;
+    outline: none;
+    color: #b8b8b8;
+}
+
+.alert {
+    color: white;
+    background: #47eb6a;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin: 16px auto;
+    width: 95%;
+    position: relative;
+}
+
+.alert p {
+    font-size: .9rem;
+}
+
+.alert-close {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 2%;
+    top: 25%;
+}
 
 
 
@@ -138,6 +205,19 @@ main {
     .grid-container {
         grid-template-rows: 70px 60px 1fr;
     }
+
+    .dash-header-search input {
+        width: 25rem;
+    }
+
+    .profile-header {
+        display: inline;
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        margin-right: 0;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -152,4 +232,56 @@ main {
     .social-media-info {
         grid-template-columns: repeat(3, 1fr);
      }
+
+    .header-container h1 {
+         font-size: 1.75rem;
+     }
+
+    .profile-header {
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .nav-item {
+        margin: 24px auto;
+        height: 30px;
+        width: 30px;
+    }
+
+    .dash-top {
+        flex-direction: row;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+
+    .dash-header {
+        color: rgb(255, 255, 255);
+        margin: 20px 16px;
+        font-size: 1.3rem;
+    }
+
+    .dash-header-search input {
+        width: 20rem;
+    }
+
+    .dash-header-search {
+        border-left: 1px solid #2c2c2c;
+        padding: 20px 0;
+        text-align: end;
+        padding-right: 16px;
+        flex: 1;
+        border-top: none
+    }
+
+    .alert span {
+        display: inline-block;
+    }
+
+    .alert p {
+        display: inline-block;
+    }
 }
