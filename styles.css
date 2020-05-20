@@ -6,7 +6,7 @@ body {
 
 .grid-container {
     display: grid;
-    height: 100%;
+    /* height: 100%; */
     grid-template-columns: 1fr;
     grid-template-rows: 60px 50px 1fr;
     grid-template-areas: 
@@ -34,7 +34,6 @@ main {
 .member-info,
 .message-and-settings {
    display: grid;
-   grid-gap: 2px;
 }
 
 .half-size-charts,
@@ -261,6 +260,122 @@ main {
     color: white;
 }
 
+/* ======================= MEMBERS STYLES ==================== */
+
+.members-1 h3,
+.members-2 h3 {
+    margin: 16px;
+    color: white;
+}
+
+.members-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new-member {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 32px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgb(39, 39, 39);
+}
+
+.member-profile-image {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 16px;
+}
+
+.members-text p {
+    color: white;
+}
+
+.members-text a {
+    text-decoration: none;
+    color: #47eb6a;
+}
+
+.new-member-date {
+    color: white;
+    margin-left: auto;
+}
+
+.recent-activity-name {
+    color: #47eb6a;
+    font-size: 1.1rem;
+}
+
+.recent-activity-time {
+    font-size: .75rem;
+}
+
+/* ======================= MESSAGE USER STYLES ==================== */
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 8px auto;
+}
+
+.message h3 {
+    margin: 16px;
+    color: white;
+}
+
+.form-field {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+}
+
+.form-area {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    height: 160px;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+}
+
+.button-primary {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #47eb6a;
+}
+
+/* ======================= SETTINGS STYLES ==================== */
+
+.settings h3 {
+    margin: 16px;
+    color: white;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -278,6 +393,10 @@ main {
         grid-template-rows: 70px 60px 1fr;
     }
 
+    .half-size-charts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .dash-header-search input {
         width: 25rem;
     }
@@ -289,6 +408,22 @@ main {
 
     .profile-img {
         margin-right: 0;
+    }
+
+    .social-media-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .social-media-info h3 {
+        width: 100%;
+    }
+
+    .social-1,
+    .social-2,
+    .social-3 {
+        padding: 16px 48px;
     }
 }
 
@@ -360,22 +495,6 @@ main {
     .alert-close {
         right: 1%;
         top: 10%;
-    }
-
-    .social-media-info {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .social-media-info h3 {
-        width: 100%;
-    }
-
-    .social-1,
-    .social-2,
-    .social-3 {
-        padding: 16px 48px;
     }
 
 }

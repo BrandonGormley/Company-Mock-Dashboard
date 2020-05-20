@@ -27,21 +27,21 @@
 
         <nav class="nav-container">
             <div class="nav-item">
-                <a class="nav-icon" href=""><img src="icons/icon-dashboard.svg" alt=""></a>
+                <a class="nav-icon" href="#dashboard"><img src="icons/icon-dashboard.svg" alt=""></a>
             </div>
             <div class="nav-item">
-                <a class="nav-icon" href=""><img src="icons/icon-members.svg" alt=""></a>
+                <a class="nav-icon" href="#members"><img src="icons/icon-members.svg" alt=""></a>
             </div>
             <div class="nav-item">
-                <a class="nav-icon" href=""><img src="icons/icon-visits.svg" alt=""></a>
+                <a class="nav-icon" href="#social-media-visits"><img src="icons/icon-visits.svg" alt=""></a>
             </div>
             <div class="nav-item">
-                <a class="nav-icon" href=""><img src="icons/icon-settings.svg" alt=""></a>
+                <a class="nav-icon" href="#settings"><img src="icons/icon-settings.svg" alt=""></a>
             </div>
         </nav> <!-- /nav -->
 
         <main>
-            <div class="dash-top">
+            <div class="dash-top" id="dashboard">
                 <h2 class="dash-header">Dashboard</h2>
                 <div class="dash-header-search">
                     <input type="search" placeholder="Search...">
@@ -100,7 +100,7 @@
             </div> <!-- /half-size-charts -->
 
 
-            <div class="social-media-info">
+            <div class="social-media-info" id="social-media-visits">
                 <h3>Social Stats</h3>
 
                 <div class="social-1">
@@ -133,25 +133,133 @@
                     </div>
                 </div>
 
+
+
+
+
+
             </div> <!-- /social-media-info -->
 
+            <div class="member-info" id="members">
 
+                <div class="members-1">
+                    <h3>New Members</h3>
 
+                    <div class="members-container">
 
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-1.jpg" alt="">
+                            <div class="members-text">
+                                <p>Victoria Chambers</p>
+                                <a href="#">victoria.chambers80@example.com</a>
+                            </div>
+                            <p class="new-member-date">10/15/15</p>
+                        </div>
 
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-2.jpg" alt="">
+                            <div class="members-text">
+                                <p>Dale Byrd</p>
+                                <a href="#">dale.byrd52@example.com</a>
+                            </div>
+                            <p class="new-member-date">10/15/15</p>
+                        </div>
 
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-3.jpg" alt="">
+                            <div class="members-text">
+                                <p>Dawn Wood</p>
+                                <a href="#">dawn.wood16@example.com</a>
+                            </div>
+                            <p class="new-member-date">10/15/15</p>
+                        </div>
 
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-4.jpg" alt="">
+                            <div class="members-text">
+                                <p>Dan Oliver</p>
+                                <a href="#">dan.oliver82@example.com</a>
+                            </div>
+                            <p class="new-member-date">10/15/15</p>
+                        </div>
 
+                    </div>
+                </div>
 
+                <div class="members-2">
 
-            <div class="member-info">
-                <div class="members-1"></div>
-                <div class="members-2"></div>
+                    <h3>Recent Activity</h3>
+
+                    <div class="members-container">
+
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-1.jpg" alt="">
+                            <div class="members-text">
+                                <p><span class="recent-activity-name">Victoria Chambers</span> commented on MeTrics SEO
+                                    Tips.</p>
+                                <p class="recent-activity-time">4 hours Ago</p>
+                            </div>
+                            <p class="recent-activity-carrot"></p>
+                        </div>
+
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-2.jpg" alt="">
+                            <div class="members-text">
+                                <p><span class="recent-activity-name">Dale Byrd</span> liked the post,
+                                    'Facebook's Changes for 2016'
+                                </p>
+                                <p class="recent-activity-time">5 hours Ago</p>
+                            </div>
+                            <p class="recent-activity-carrot"></p>
+                        </div>
+
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-3.jpg" alt="">
+                            <div class="members-text">
+                                <p><span class="recent-activity-name">Dawn Wood</span> commented on 'Faceook's
+                                    Changes for 2016'</p>
+                                <p class="recent-activity-time">5 hours Ago</p>
+                            </div>
+                            <p class="recent-activity-carrot"></p>
+                        </div>
+
+                        <div class="new-member">
+                            <img class="member-profile-image" src="images/member-4.jpg" alt="">
+                            <div class="members-text">
+                                <p><span class="recent-activity-name">Dan Oliver</span> posted MeTrics' SEO Tips.
+                                </p>
+                                <p class="recent-activity-time">1 day Ago</p>
+                            </div>
+                            <p class="recent-activity-carrot"></p>
+                        </div>
+
+                    </div>
+
+                </div>
             </div> <!-- /member-info -->
+
             <div class="message-and-settings">
-                <div class="message"></div>
-                <div class="settings"></div>
+
+                <div class="message">
+                    <h3>Message User</h3>
+
+                    <form class="widget-container">
+                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                        <button class="button-primary" id="send">Send</button>
+                    </form>
+                </div>
+
+                <div class="settings" id="settings">
+                    <h3>Settings</h3>
+                </div>
+
             </div> <!-- /message-and-settings -->
+
+
+
+
+
         </main> <!-- /main -->
     </div>
     <!-- /grid-container—>

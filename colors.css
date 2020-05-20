@@ -20,14 +20,18 @@ body {
 .chart-2,
 .members-1,
 .members-2 {
-	background: rgba(148, 202, 155, 0.2);
+	background: rgba(76, 83, 76, 0.2);
 }
-.social-1,
-.social-2,
-.social-3,
+
 .message,
 .settings {
-	background: rgba(108, 211, 113, 0.2);
+	background: rgba(76, 83, 76, 0.2);
+}
+
+.social-1,
+.social-2,
+.social-3 {
+	background: rgba(32, 199, 32, 0.2);
 }
 
 
