@@ -1,5 +1,5 @@
 body {
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Jost', sans-serif;
 }
 
 /* ======================= GRID STYLES ==================== */
@@ -176,18 +176,90 @@ main {
     top: 10%;
 }
 
+/* ======================= TRAFFIC STYLES ==================== */
 
+.traffic-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.traffic-header h3 {
+    margin: 16px;
+    color: white;
+}
 
+.traffic-nav li {
+    display: inline-block;
+    color: white;
+    margin: 0 16px;
+}
 
+.active {
+    background-color: #47eb6a;
+    padding: 4px 16px;
+    border-radius: 30px;
+}
 
+/* ======================= DAILY TRAFFIC STYLES ==================== */
 
+.chart-1 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
 
+.daily h3 {
+    margin: 16px;
+    color: white;
+}
 
+/* ======================= MOBILE USERS STYLES ==================== */
 
+.chart-2 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
 
+.mobile h3 {
+    margin: 16px;
+    color: white;
+}
 
+/* ======================= SOCIAL MEDIA STYLES ==================== */
 
+.social-media-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-1,
+.social-2,
+.social-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 12px;
+    padding: 32px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 32, 32);
+}
+.social-brand-name {
+    font-size: 2rem;
+    color: white;
+}
+
+.social-numbers {
+    text-align: right;
+    font-size: 1.5rem;
+    color: rgb(231, 231, 231);
+}
+
+.social-media-info h3 {
+    margin: 16px;
+    color: white;
+}
 
 
 
@@ -289,4 +361,21 @@ main {
         right: 1%;
         top: 10%;
     }
+
+    .social-media-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .social-media-info h3 {
+        width: 100%;
+    }
+
+    .social-1,
+    .social-2,
+    .social-3 {
+        padding: 16px 48px;
+    }
+
 }

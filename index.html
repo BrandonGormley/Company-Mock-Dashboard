@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ourMeTrics | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="colors.css">
@@ -54,30 +55,95 @@
 
             <div class="full-size-chart">
 
+                <section class="traffic">
+                    <div class="traffic-header">
+                        <h3>TRAFFIC</h3>
+                        <ul class="traffic-nav">
+                            <li class="traffic-nav-link">Hourly</li>
+                            <li class="traffic-nav-link">Daily</li>
+                            <li class="traffic-nav-link active">Weekly</li>
+                            <li class="traffic-nav-link">Monthly</li>
+                        </ul>
+                    </div>
+                    <div class="widget-container-full">
 
+                        <canvas id="traffic-chart"></canvas>
+                    </div>
+                </section>
 
             </div> <!-- /full-size-chart -->
 
-
-
-
-
-
-
-
-
-
-
-
             <div class="half-size-charts">
-                <div class="chart-1"></div>
-                <div class="chart-2"></div>
+
+                <div class="chart-1">
+                    <section class="daily">
+                        <h3>Daily Traffic</h3>
+
+                        <div class="widget-container-half">
+
+                            <canvas id="daily-chart"></canvas>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="chart-2">
+                    <section class="mobile">
+                        <h3>Mobile Users</h3>
+
+                        <div class="widget-container-half">
+
+                            <canvas id="mobile-chart"></canvas>
+                        </div>
+                    </section>
+                </div>
+
             </div> <!-- /half-size-charts -->
+
+
             <div class="social-media-info">
-                <div class="social-1"></div>
-                <div class="social-2"></div>
-                <div class="social-3"></div>
+                <h3>Social Stats</h3>
+
+                <div class="social-1">
+                    <div class="social-image">
+                        <!-- INLINE SVG -->
+                    </div>
+                    <div class="social-text">
+                        <p class="social-brand-name">Twitter</p>
+                        <p class="social-numbers">10,345</p>
+                    </div>
+                </div>
+
+                <div class="social-2">
+                    <div class="social-image">
+                        <!-- INLINE SVG -->
+                    </div>
+                    <div class="social-text">
+                        <p class="social-brand-name">Facebook</p>
+                        <p class="social-numbers">9,813</p>
+                    </div>
+                </div>
+
+                <div class="social-3">
+                    <div class="social-image">
+                        <!-- INLINE SVG -->
+                    </div>
+                    <div class="social-text">
+                        <p class="social-brand-name">Google+</p>
+                        <p class="social-numbers">1,721</p>
+                    </div>
+                </div>
+
             </div> <!-- /social-media-info -->
+
+
+
+
+
+
+
+
+
+
             <div class="member-info">
                 <div class="members-1"></div>
                 <div class="members-2"></div>
