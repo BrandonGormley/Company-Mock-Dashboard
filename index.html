@@ -7,8 +7,11 @@
     <title>ourMeTrics | Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="toggle-switch-rem.css">
+
 </head>
 
 <body>
@@ -27,7 +30,7 @@
 
         <nav class="nav-container">
             <div class="nav-item">
-                <a class="nav-icon" href="#dashboard"><img src="icons/icon-dashboard.svg" alt=""></a>
+                <a class="nav-icon" href="#dashboard"><img class="nav-active" src="icons/icon-dashboard.svg" alt=""></a>
             </div>
             <div class="nav-item">
                 <a class="nav-icon" href="#members"><img src="icons/icon-members.svg" alt=""></a>
@@ -48,8 +51,11 @@
                 </div>
 
                 <div class="alert" id="alert">
-                    <span><strong>Alert : </strong> <span class="alert-close">x</span></span>
-                    <p>Please make you you clock in before accessing for up to date metrics.</p>
+
+                </div>
+
+                <div class="form-check" id="form-check">
+
                 </div>
             </div> <!-- /dash-top -->
 
@@ -252,6 +258,53 @@
 
                 <div class="settings" id="settings">
                     <h3>Settings</h3>
+                    <!-- custom CSS toggle code -->
+                    <div class="toggle-switch-container">
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox">
+
+                            <strong class="email-notifications-text">
+                                Send Email Notifications
+                            </strong>
+
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- custom CSS toggle code -->
+                    <div class="toggle-switch-container">
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox">
+
+                            <strong class="set-profile-text">
+                                Set Profile to Public
+                            </strong>
+
+                            <span class="on-off-switch">
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="settings-container">
+                        <select class="form-field" id="timezone">
+                            <option class="timezone-input" disabled selected>Select a Timezone</option>
+                            <option>Eastern</option>
+                            <option>Central</option>
+                            <option>Pacific</option>
+                            <!-- more options -->
+                        </select>
+
+                        <div class="settings-button">
+                            <div class="button-primary" id="save">Save</div>
+                            <div class="button-disabled" id="cancel">Cancel</div>
+                        </div>
+                    </div>
                 </div>
 
             </div> <!-- /message-and-settings -->
@@ -262,7 +315,10 @@
 
         </main> <!-- /main -->
     </div>
-    <!-- /grid-container—>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

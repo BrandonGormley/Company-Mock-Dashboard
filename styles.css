@@ -42,6 +42,10 @@ main {
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
+.message-and-settings {
+    margin-bottom: 16px;
+}
+
 /* ======================= HEADER STYLES ==================== */
 
 .header-container {
@@ -118,6 +122,11 @@ main {
     width: 40px;
 }
 
+.nav-active {
+    border-bottom: 4px solid #47eb6a;
+    padding-bottom: 4px;
+}
+
 /* ======================= DASH / ALERT STYLES ==================== */
 
 .dash-top {
@@ -162,18 +171,20 @@ main {
     margin: 16px auto;
     width: 95%;
     position: relative;
+    transition: .5s ease-in-out;
 }
 
 .alert p {
     font-size: .9rem;
 }
 
-.alert-close {
+p.alert-banner-close {
     font-size: 1.2rem;
     position: absolute;
     right: 2%;
     top: 10%;
 }
+
 
 /* ======================= TRAFFIC STYLES ==================== */
 
@@ -280,6 +291,14 @@ main {
     margin: 12px 32px;
     padding: 16px 0;
     border-bottom: 1px solid rgb(39, 39, 39);
+    transition: .3s;
+}
+
+.new-member:hover,
+.new-member:active {
+    transform: scale(1.01);
+    background: rgba(41, 44, 41, 0.2);
+    border-radius: 5px;
 }
 
 .member-profile-image {
@@ -338,6 +357,12 @@ main {
     margin: 8px 0;
     font-size: 1.1rem;
     color: #2c2c2c;
+    transition: .3s;
+}
+
+.form-field:active,
+.form-field:hover {
+    transform: scale(1.02);
 }
 
 .form-area {
@@ -349,6 +374,11 @@ main {
     font-size: 1.1rem;
     color: #2c2c2c;
     margin-bottom: 8px;
+    transition: .3s;
+}
+.form-area:active,
+.form-area:hover {
+    transform: scale(1.02);
 }
 
 .button-primary {
@@ -359,13 +389,75 @@ main {
     margin: 8px 0;
     font-size: 1.1rem;
     color: #ffffff;
-    background: #47eb6a;
+    background: rgb(71, 235, 106);
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+}
+.button-primary:hover,
+.button-primary:active {
+    transform: scale(1.02);
+    background-color: #40d460;
+}
+
+.form-check {
+    color: white;
+    background: #eb6363;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin: 16px auto;
+    width: 95%;
+    position: relative;
+    transition: .5s ease-in-out;
+    display: none;
 }
 
 /* ======================= SETTINGS STYLES ==================== */
 
 .settings h3 {
     margin: 16px;
+    color: white;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 8px auto;
+    padding-bottom: 32px;
+}
+
+.button-disabled {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #eb6363;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.button-disabled:hover,
+.button-disabled:active {
+    transform: scale(1.01);
+    background: #cf5656;
+}
+
+.settings label {
+    margin: 16px 32px;
+}
+
+.toggle-switch-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.email-notifications-text,
+.set-profile-text {
     color: white;
 }
 
