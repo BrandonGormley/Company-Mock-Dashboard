@@ -16,6 +16,7 @@ alertBanner.addEventListener('click', e => {
 });
 
 ///////////////////// LINE GRAPH //////////////////////////////
+
 let trafficCanvas = document.querySelector('#traffic-chart');
 
 let trafficData = {
@@ -120,7 +121,8 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
-///////////////////// MESSAGING FORM CHECK  //////////////////////////////
+/////////////////// MESSAGING FORM CHECK  //////////////////////////////
+
 
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
@@ -128,7 +130,6 @@ const send = document.getElementById("send");
 const formCheck = document.querySelector('#form-check');
 
 send.addEventListener('click', () => {
-
     if (user.value === "" && message.value === "") {
         formCheck.style.display = 'block';
         formCheck.innerHTML =
@@ -165,7 +166,7 @@ send.addEventListener('click', () => {
         <p><strong> SUCCESS </strong> Message successfully sent to: ${user.value}.</p>
         <p class="alert-banner-close">x</p>
         </div>
-            `
+            `;
     }
 });
 
