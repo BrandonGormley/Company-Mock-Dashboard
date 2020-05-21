@@ -15,6 +15,15 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
+///////////////////// Remove Notificaiton Icon //////////////////////////////
+
+const bell = document.querySelector('.profile-container-bell');
+const notification = document.querySelector('.notification-icon');
+
+bell.addEventListener('click', () => {
+    notification.style.display = 'none';
+})
+
 ///////////////////// LINE GRAPH //////////////////////////////
 
 let trafficCanvas = document.querySelector('#traffic-chart');
@@ -123,15 +132,18 @@ let mobileChart = new Chart(mobileCanvas, {
 
 /////////////////// MESSAGING FORM CHECK  //////////////////////////////
 
+const body = document.querySelector('body');
 
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 const formCheck = document.querySelector('#form-check');
 
-send.addEventListener('click', () => {
+send.addEventListener('click', (e) => {
+    e.preventDefault();
     if (user.value === "" && message.value === "") {
         formCheck.style.display = 'block';
+        formCheck.style.backgroundColor = '#cf5656';
         formCheck.innerHTML =
             `
         <div class="form-banner">
@@ -141,6 +153,7 @@ send.addEventListener('click', () => {
             `;
     } else if (user.value === "") {
         formCheck.style.display = 'block';
+        formCheck.style.backgroundColor = '#cf5656';
         formCheck.innerHTML =
             `
         <div class="form-banner">
@@ -150,6 +163,7 @@ send.addEventListener('click', () => {
             `;
     } else if (message.value === "") {
         formCheck.style.display = 'block';
+        formCheck.style.backgroundColor = '#cf5656';
         formCheck.innerHTML =
             `
         <div class="form-banner">
@@ -159,11 +173,11 @@ send.addEventListener('click', () => {
             `;
     } else {
         formCheck.style.display = 'block';
-        formCheck.style.backgroundColor = '#32a64b';
+        formCheck.style.backgroundColor = '#47eb6a';
         formCheck.innerHTML =
             `
         <div class="form-banner">
-        <p><strong> SUCCESS </strong> Message successfully sent to: ${user.value}.</p>
+        <p><strong>SUCCESS: </strong> Message successfully sent to: ${user.value}.</p>
         <p class="alert-banner-close">x</p>
         </div>
             `;
@@ -174,5 +188,51 @@ formCheck.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
         formCheck.style.display = 'none';
+    }
+});
+
+/////////////////// SETTINGS FORM CHECK  //////////////////////////////
+
+const cancel = document.getElementById('cancel')
+const save = document.getElementById("save");
+const formSettingsCheck = document.querySelector('#form-settings-check');
+
+save.addEventListener('click', (e) => {
+    e.preventDefault();
+    formSettingsCheck.style.display = 'block';
+    formSettingsCheck.style.backgroundColor = '#47eb6a';
+    formSettingsCheck.innerHTML =
+        `
+        <div class="form-banner">
+        <p><strong>SETTINGS UPDATED:</strong> You're most recent settings have been applied.</p>
+        <p class="alert-banner-close">x</p>
+        </div>
+            `;
+});
+
+formSettingsCheck.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains('alert-banner-close')) {
+        formSettingsCheck.style.display = 'none';
+    }
+});
+
+cancel.addEventListener('click', (e) => {
+    e.preventDefault();
+    formSettingsCheck.style.display = 'block';
+    formSettingsCheck.style.backgroundColor = '#cf5656';
+    formSettingsCheck.innerHTML =
+        `
+        <div class="form-banner">
+        <p><strong>SETTINGS CANCELLED:</strong> You're most recent settings have been cancelled.</p>
+        <p class="alert-banner-close">x</p>
+        </div>
+            `;
+});
+
+formSettingsCheck.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains('alert-banner-close')) {
+        formSettingsCheck.style.display = 'none';
     }
 });

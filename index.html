@@ -22,6 +22,7 @@
             <div class="profile-container">
                 <div class="profile-container-bell">
                     <img class="profile-bell" src="icons/icon-bell.svg" alt="">
+                    <span class="notification-icon"></span>
                 </div>
                 <img class="profile-img" src="images/profile-img.jpg" alt="">
                 <h3 class="profile-header">Brandon Gormley</h3>
@@ -55,6 +56,10 @@
                 </div>
 
                 <div class="form-check" id="form-check">
+
+                </div>
+
+                <div class="form-settings-check" id="form-settings-check">
 
                 </div>
 
@@ -260,44 +265,54 @@
                 <div class="settings" id="settings">
                     <h3>Settings</h3>
                     <!-- custom CSS toggle code -->
-                    <div class="toggle-switch-container">
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                    <div class="flex-switch-container">
+                        <div class="toggle-switch-container">
+                            <label class="switch-light switch-ios" onclick="">
+                                <input type="checkbox">
 
-                            <strong class="email-notifications-text">
-                                Send Email Notifications
-                            </strong>
+                                <strong class="email-notifications-text">
+                                    Send Email Notifications
+                                </strong>
 
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
-                    </div>
-                    <!-- custom CSS toggle code -->
-                    <div class="toggle-switch-container">
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                                <span>
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- custom CSS toggle code -->
+                        <div class="toggle-switch-container">
+                            <label class="switch-light switch-ios" onclick="">
+                                <input type="checkbox">
 
-                            <strong class="set-profile-text">
-                                Set Profile to Public
-                            </strong>
+                                <strong class="set-profile-text">
+                                    Set Profile to Public
+                                </strong>
 
-                            <span class="on-off-switch">
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
+                                <span class="on-off-switch">
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                </span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="settings-container">
                         <select class="form-field" id="timezone">
                             <option class="timezone-input" disabled selected>Select a Timezone</option>
-                            <option>Eastern</option>
-                            <option>Central</option>
-                            <option>Pacific</option>
+                            <option>UTC-12:00 (unofficial)</option>
+                            <option>UTC-11:00 (ST) - American Samoa, Jarvis Island</option>
+                            <option>UTC-10:00 (HT) - Hawaii</option>
+                            <option>UTC-09:00 (AKT) - most of the state of Alaska</option>
+                            <option>UTC-08:00 (PT) - Pacific Time Zone</option>
+                            <option>UTC-07:00 (MT) - Mountain Time Zone</option>
+                            <option>UTC-06:00 (CT) - Central Time Zone</option>
+                            <option>UTC-05:00 (ET) - Eastern Time zone</option>
+                            <option>UTC-04:00 (AST) - Puerto Rico, the U.S. Virgin Islands</option>
+                            <option>UTC+10:00 (ChT) - Guam and the Nothern Mariana Islands</option>
+                            <option>UTC+12:00 (unoffical) - Wake Island, McMurdo Station</option>
                             <!-- more options -->
                         </select>
 

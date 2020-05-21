@@ -96,6 +96,7 @@ main {
     margin-right: 1rem;
     border-right: 2px solid white;
     box-sizing: initial;
+    position: relative;
 }
 
 .profile-bell {
@@ -105,6 +106,17 @@ main {
 
 .profile-bell:hover {
     transform: scale(1.2) rotate(-25deg) ;
+}
+
+.notification-icon {
+    width: 8px;
+    height: 8px;
+    top: 1px;
+    color: #eb6363;
+    background-color: #eb6363;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
 }
 
 /* ======================= NAV STYLES ==================== */
@@ -124,11 +136,6 @@ main {
 .nav-icon {
     height: 40px;
     width: 40px;
-}
-
-.nav-active {
-    border-bottom: 4px solid #47eb6a;
-    padding-bottom: 4px;
 }
 
 /* ======================= DASH / ALERT STYLES ==================== */
@@ -196,6 +203,18 @@ p.alert-banner-close:active {
     transform: scale(1.4);
 }
 
+.form-settings-check {
+    color: white;
+    background: #47eb6a;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin: 16px auto;
+    width: 95%;
+    position: relative;
+    transition: .5s ease-in-out;
+    display: none;
+}
+
 
 /* ======================= TRAFFIC STYLES ==================== */
 
@@ -238,7 +257,6 @@ p.alert-banner-close:active {
 /* ======================= MOBILE USERS STYLES ==================== */
 
 .chart-2 {
-    border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
@@ -472,6 +490,10 @@ p.alert-banner-close:active {
     color: white;
 }
 
+.flex-switch-container {
+    display: flex;
+}
+
 
 
 
@@ -527,6 +549,18 @@ p.alert-banner-close:active {
     .social-2,
     .social-3 {
         padding: 16px 48px;
+    }
+
+    .chart-1 {
+        border-right: 1px solid black;
+    }
+    
+    .chart-2 {
+        border-top: 1px solid black;
+    }
+
+    .social-media-info {
+        border-bottom: 1px solid black;
     }
 }
 
