@@ -11,7 +11,7 @@ alertBanner.innerHTML =
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
-        alertBanner.style.display = 'none';
+        alertBanner.style.display += "none";
     }
 });
 
@@ -141,6 +141,7 @@ const formCheck = document.querySelector('#form-check');
 
 send.addEventListener('click', (e) => {
     e.preventDefault();
+    document.documentElement.scrollTop = 0;
     if (user.value === "" && message.value === "") {
         formCheck.style.display = 'block';
         formCheck.style.backgroundColor = '#cf5656';
@@ -199,6 +200,7 @@ const formSettingsCheck = document.querySelector('#form-settings-check');
 
 save.addEventListener('click', (e) => {
     e.preventDefault();
+    document.documentElement.scrollTop = 0;
     formSettingsCheck.style.display = 'block';
     formSettingsCheck.style.backgroundColor = '#47eb6a';
     formSettingsCheck.innerHTML =
@@ -218,6 +220,7 @@ formSettingsCheck.addEventListener('click', e => {
 });
 
 cancel.addEventListener('click', (e) => {
+    document.documentElement.scrollTop = 0;
     e.preventDefault();
     formSettingsCheck.style.display = 'block';
     formSettingsCheck.style.backgroundColor = '#cf5656';

@@ -265,6 +265,10 @@ p.alert-banner-close:active {
     color: white;
 }
 
+#mobile-chart {
+    margin-bottom: 16px;
+}
+
 /* ======================= SOCIAL MEDIA STYLES ==================== */
 
 .social-media-info {
