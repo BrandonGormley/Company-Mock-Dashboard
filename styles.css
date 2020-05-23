@@ -552,7 +552,16 @@ p.alert-banner-close:active {
     .social-1,
     .social-2,
     .social-3 {
-        padding: 16px 48px;
+        justify-content: space-evenly;
+        padding: 4px 8px;
+    }
+
+    .social-image {
+        padding-right: 2px;
+    }
+
+    .social-2 .social-image {
+        margin: auto 8px;
     }
 
     .chart-1 {
@@ -636,6 +645,12 @@ p.alert-banner-close:active {
     .alert-close {
         right: 1%;
         top: 10%;
+    }
+
+    .social-1,
+    .social-2,
+    .social-3 {
+        padding: 16px 24px;
     }
 
 }
